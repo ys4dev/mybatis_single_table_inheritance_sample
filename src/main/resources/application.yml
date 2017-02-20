@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:log4jdbc:mysql://192.168.99.100:3306/sample?useSSL=false
+    username: sample
+    password: sample
+    driver-class-name: net.sf.log4jdbc.DriverSpy
+logging:
+  level:
+    jdbc:
+      resultset: off
+      audit: off
+      sqlonly: off
+      connection: off

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+    <classPathEntry location="/Users/sakura/.gradle/caches/modules-2/files-2.1/mysql/mysql-connector-java/5.1.40/ef2a2ceab1735eaaae0b5d1cccf574fb7c6e1c52/mysql-connector-java-5.1.40.jar" />
+    <context id="MySQLTables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressDate" value="true" />
+        </commentGenerator>
+        <jdbcConnection
+                driverClass="com.mysql.jdbc.Driver"
+                connectionURL="jdbc:mysql://192.168.99.100:3306/sample"
+                userId="sample"
+                password="sample" />
+        <javaModelGenerator
+                targetPackage="sample.domain.model"
+                targetProject="src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaModelGenerator>
+        <sqlMapGenerator
+                targetPackage="sample.domain.mapper"
+                targetProject="src/main/resources">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+        <javaClientGenerator
+                targetPackage="sample.domain.mapper"
+                targetProject="src/main/java" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+        <table tableName="%"
+               enableInsert="true"
+               enableSelectByPrimaryKey="true"
+               enableSelectByExample="true"
+               enableUpdateByPrimaryKey="true"
+               enableUpdateByExample="true"
+               enableDeleteByPrimaryKey="true"
+               enableDeleteByExample="true"
+               enableCountByExample="true"
+               selectByExampleQueryId="true"
+               modelType="flat">
+        </table>
+    </context>
+</generatorConfiguration>
